@@ -1,9 +1,71 @@
 .item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 8px;
-  border-radius: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 5%);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+
+.name,
+.number {
+  margin: 0;
+  font-size: 17px;
+}
+
+.name {
+  color: #333333;
+}
+
+.number {
+  color: #666666;
+}
+
+.button {
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.button:hover {
+  border-color: #d32f2f;
+  background-color: #fff1f1;
+  color: #d32f2f;
+}
+
+.button:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 520px) {
+  .item {
+    align-items: flex-start;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
 }
